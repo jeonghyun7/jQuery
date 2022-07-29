@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>그림의 크기를 픽셀 단위로 변경하기</title>
+    <script src="https://code.jquery.com/jQuery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button.b1").click(function() {
+                $("img").animate( {
+                    width: '100px'
+                }, 3000);
+            });
+            $("button.b2").click(function() {
+                $("img").animate( {
+                    width: '200px'
+                }, 3000);
+            });
+            $("button.b3").click(function() {
+                $("img").animate( {
+                    width: '300px'
+                }, 3000);
+            });
+        });
+    </script>
+    <style>
+        .css_pic {
+            height: 650px;
+            text-align: center;
+        }
+        .css_pic img {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="css_pic">
+        <p>버튼을 누르면 그림의 크기가 바뀝니다.</p>
+        <button class="b1">가로 100픽셀</button>
+        <button class="b2">가로 200픽셀</button>
+        <button class="b3">가로 300픽셀</button><br><br>
+        <img name="pic1" src="../../images/11.jpg">
+    </div>
+</body>
+</html>

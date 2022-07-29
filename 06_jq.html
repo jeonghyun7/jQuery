@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://code.jquery.com/jQuery-3.2.1.min.js"></script>
+    <script>
+        var n=0;
+        $(document).ready( function() {
+            $("div.out").mouseenter( function() {
+                $("p:first", this).text("마우스 포인트 들어옴");
+                $("p:last", this).text(++n);
+            });
+
+            $("div.out").mouseleave( function() {
+                $("p:first", this).text("마우스 포인트 나감");
+                $("p:last", this).text("최종 횟수 : " +n);
+            });
+
+            $("div.out").mousedown( function() {
+                $("p:first", this).hide();
+                $("p:last", this).text("메시지 사라짐");
+            });
+
+            $("div.out").mouseup( function() {
+                $("p:first", this).show();
+                $("p:last", this).text("최종 횟수 : " + n);
+            });
+        });
+    </script>
+    <style>
+        div.out {
+            margin: 200px;
+            width: 400px;
+            height: 300px;
+            border: 3px solid #000000;
+            text-align: center;
+            background-color: darkgrey;
+            font-size: 1.6em;
+        }
+       
+        #pp {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <p id="pp">마우스 이벤트 알아보기</p>
+        <p>0</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://code.jquery.com/jQuery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#out").click(function() {
+                $("img").fadeOut("slow");
+            });
+
+            $("#in").click(function() {
+                $("img").fadeIn("slow");
+            });
+
+            $("#toggle").click(function() {
+                $("img").fadeToggle("slow");
+            });
+            //toggle버튼 하나로 in,out 두 효과를 모두 반복실행 할 수 있음.
+            
+            $("#to50").click(function() {
+                $("img").fadeTo("slow", 0.5);
+            });
+
+            $("#to10").click(function() {
+                $("img").fadeTo("slow", 0.1);
+            });
+
+            $("#to100").click(function() {
+                $("img").fadeTo("slow", 1.0);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="out">fadeOut</button>
+    <button id="in">fadeIn</button>
+    <button id="toggle">fadeToggle</button>
+    <button id="to50">opacity 50%</button>
+    <button id="to10">opacity 90%</button>
+    <button id="to100">opacity 0%</button>
+    <p></p>
+    <img name="pic1" src="../../images/11.jpg">
+</body>
+</html>
